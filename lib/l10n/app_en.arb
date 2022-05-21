@@ -1,0 +1,10 @@
+{
+    "language": "English",
+    "@language": {
+        "description": "The default language"
+    },
+    "title": "CALCULATOR",
+    "@title": {
+        "description": "App Title"
+    }
+}
