@@ -6,7 +6,7 @@ import 'package:simple_calculator/constants/themes.dart';
 import 'package:simple_calculator/l10n/l10n.dart';
 import 'package:simple_calculator/state_management/bindings/initial.dart';
 import 'package:simple_calculator/ui/drawer.dart';
-import 'package:simple_calculator/ui/screens/home.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_calculator/ui/screens/splash.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -21,32 +21,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     bool darkMode =
         WidgetsBinding.instance.window.platformBrightness == Brightness.dark;
-    return ThemeProvider(
-      initTheme: darkMode ? darkTheme : lightTheme,
-      builder: (_, myTheme) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: lightTheme,
-          darkTheme: darkTheme,
-          supportedLocales: L10n.all,
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-          ],
-          getPages: [
-            GetPage(
-              name: SplashScreen.routeName,
-              page: () => const SplashScreen(),
-            ),
-            GetPage(
-              name: DrawerSetup.routeName,
-              page: () => const DrawerSetup(),
-              binding: InitialBinding(),
-            ),
-          ],
-          initialRoute: SplashScreen.routeName,
+    return ScreenUtilInit(
+      designSize: const Size(414, 896),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return ThemeProvider(
+          initTheme: darkMode ? darkTheme : lightTheme,
+          builder: (_, myTheme) {
+            return GetMaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: lightTheme,
+              darkTheme: darkTheme,
+              supportedLocales: L10n.all,
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+              ],
+              getPages: [
+                GetPage(
+                  name: SplashScreen.routeName,
+                  page: () => const SplashScreen(),
+                ),
+                GetPage(
+                  name: DrawerSetup.routeName,
+                  page: () => const DrawerSetup(),
+                  binding: InitialBinding(),
+                ),
+              ],
+              initialRoute: SplashScreen.routeName,
+            );
+          },
         );
       },
     );

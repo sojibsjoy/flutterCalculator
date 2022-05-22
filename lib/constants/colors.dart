@@ -2,14 +2,20 @@ import 'package:flutter/material.dart';
 
 class ConstantColors {
   static Color kAppColor = Colors.purple;
-  static Color kLightTheme = const Color(0xFFF1F9FF);
-  static Color kLightTheme2 = const Color(0xFFF6F6F6);
-  static Color kLightTheme3 = const Color(0xFFECECEC);
-  static Color kLightMenu = const Color(0xFFE1E1E1);
-  static Color kDarkTheme = const Color(0xFF22252D);
-  static Color kDarkTheme2 = const Color(0xFF3E3E42);
-  static Color kDarkTheme3 = const Color(0xFF2D2D30);
-  static Color kDarkMenu = const Color(0xFF252525);
-  static Color kLightText = const Color(0xFF1E3044);
-  static Color kDarkText = const Color(0xFFF1F9FF);
+  /* Light Theme Colors */
+  static Color kLightTheme = const Color(0xFFF1F3F4);
+  static Color kLightTheme2 = const Color(0xFFE8EAED);
+  static Color kLightTheme3 = const Color(0xFFDADCE0);
+  static Color kLightMenu = const Color(0xFFBDC1C6);
+  static Color kLightText = const Color(0xFF0E1013);
+
+  /* Dark Theme Colors */
+
+  static Color kDarkTheme = const Color(0xFF17181B);
+  static Color kDarkTheme2 = const Color(0xFF202124);
+  static Color kDarkTheme3 = const Color(0xFF282A2D);
+  static Color kDarkMenu = const Color(0xFF2E3134);
+  static Color kDarkText = const Color(0xFFF8F9FA);
+
+  /* Common Colors */
 }

@@ -6,5 +6,45 @@
     "title": "CALCULATOR",
     "@title": {
         "description": "App Title"
+    },
+    "zero": "0",
+    "@zero": {
+        "description": "Number Zero"
+    },
+    "one": "1",
+    "@one": {
+        "description": "Number One"
+    },
+    "two": "2",
+    "@two": {
+        "description": "Number Two"
+    },
+    "three": "3",
+    "@three": {
+        "description": "Number Three"
+    },
+    "four": "4",
+    "@four": {
+        "description": "Number Four"
+    },
+    "five": "5",
+    "@five": {
+        "description": "Number Five"
+    },
+    "six": "6",
+    "@six": {
+        "description": "Number Six"
+    },
+    "seven": "7",
+    "@seven": {
+        "description": "Number Seven"
+    },
+    "eight": "8",
+    "@eight": {
+        "description": "Number Eight"
+    },
+    "nine": "9",
+    "@nine": {
+        "description": "Number Nine"
     }
 }
